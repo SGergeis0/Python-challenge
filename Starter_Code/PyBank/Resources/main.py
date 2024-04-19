@@ -1,5 +1,5 @@
 import csv
-
+#Open csv and append rows to months and profit
 with open('budget_data.csv', 'r') as file:
     reader = csv.reader(file)
     next(reader)  
@@ -16,7 +16,7 @@ with open('budget_data.csv', 'r') as file:
         total_profit.append(int(row[1]))
 
 
-
+#calculate total months and profit
 total_months = len(months)
 profit_or_loss = sum(total_profit)
 for i in range(1, total_months):
@@ -24,7 +24,7 @@ for i in range(1, total_months):
     monthly_profit_change.append(change)
 
 
-
+#calculate change
 revenue_change = sum(monthly_profit_change)/ len(monthly_profit_change)
 
 greatest_increase = max(monthly_profit_change)
