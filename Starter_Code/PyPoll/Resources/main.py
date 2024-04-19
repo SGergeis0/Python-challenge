@@ -1,6 +1,6 @@
 import csv
 
-
+#open csv, skip header and name rows
 with open('election_data.csv', 'r') as file:
     reader = csv.reader(file)
     next(reader) 
